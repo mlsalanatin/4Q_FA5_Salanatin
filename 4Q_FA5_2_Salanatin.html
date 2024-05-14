@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2 - Arrays</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="addContact()">Add</button>
+    <button onclick="removeContact()">Remove</button>
+    <p id="output"></p>
+
+    <script>
+        var arr = [];
+        var total = "";
+
+        function addContact(){
+            total = "";
+            var x = document.getElementById("input");
+            arr.push(x.value);
+
+            if(arr.length > 7){
+                removeArray();
+            }
+
+            for(y in arr){
+                total = total + arr[y] + "<br>";
+            }
+
+            document.getElementById("output").innerHTML = total;  
+        }
+
+        function removeContact(){
+            total = "";
+            var x = document.getElementById("input");
+            arr.pop();
+
+            for (y in arr){
+                total = total + arr[y] + "<br>";
+            }
+
+            document.getElementById("output").innerHTML = total;
+        }
+
+        function removeArray(){
+            arr.shift();
+        }
+    </script>
+</body>
+</html>

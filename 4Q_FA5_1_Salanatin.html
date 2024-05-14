@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1 - Control Structures</title>
+</head>
+<body>
+    <script>
+        var num;
+        var check = false;
+
+        while (check == false){
+            num = prompt("Enter a number ^-^");
+
+            if (isNaN(num) == true){
+                alert("Please enter a NUMBER 😀");
+                check = false;
+            }
+            else{
+                check = true;
+            }
+        }
+
+        document.write("Number inputted: " + num + "<br><br>")
+
+        if (num % 2 == 1){
+            var x = 0;
+            x = Number(num);
+
+            while (x >= 1){
+                for (y=0; y<num; y++){
+                    document.write(x + " ");
+                }
+
+                document.write("<br>");
+                x--;
+            }
+        }
+        else{
+            var x = 0;
+            x = Number(num);
+
+            while (x >= 1){
+                for (y=0; y<x; y++){
+                    document.write(x + " ");
+                }
+
+                document.write("<br>");
+                x--;
+            }
+        }
+    </script>
+</body>
+</html>
